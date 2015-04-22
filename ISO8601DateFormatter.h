@@ -5,6 +5,7 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "ISO8601DateFormatterCompat.h"
 
 ///Which of ISO 8601's three date formats the formatter should produce.
 typedef NS_ENUM(NSUInteger, ISO8601DateFormat) {

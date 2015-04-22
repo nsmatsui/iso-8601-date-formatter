@@ -305,7 +305,7 @@ expectTimeZoneWithHoursFromGMT:expectedHoursFromGMT];
 - (void) testUnparsingDatesWithoutTime {
 	_iso8601DateFormatter.includeTime = false;
 
-	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:ISO8601GregorianCalendar];
 	STAssertNotNil(calendar, @"Couldn't create Gregorian calendar with which to set up date-unparsing tests");
 	NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
 	STAssertNotNil(calendar, @"Couldn't create C/POSIX locale with which to set up date-unparsing tests");

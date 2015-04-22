@@ -54,11 +54,11 @@ static const NSTimeInterval gSecondsPerMinute = 60.0;
 	timeZone:(NSTimeZone *)timeZone
 {
 	NSDate *now = [NSDate date];
-	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:ISO8601GregorianCalendar];
 	calendar.timeZone = timeZone;
 
 	NSDate *today = nil;
-	[calendar rangeOfUnit:NSDayCalendarUnit startDate:&today interval:NULL forDate:now];
+	[calendar rangeOfUnit:ISO8601DayCalendarUnit startDate:&today interval:NULL forDate:now];
 
 	NSDateComponents *components = [NSDateComponents new];
 	components.hour = (NSInteger)hour;
